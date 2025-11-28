@@ -14,7 +14,7 @@ export const randomObjectsApiSlice = createApi({
         baseUrl: import.meta.env.VITE_SERVICE_URL as string,
         identityPoolId: import.meta.env.VITE_IDENTITY_POOL_ID as string,
     }),
-    reducerPath: `${PATH}Api`,
+    reducerPath: `${PATH}RandomApi`,
     endpoints: (build) => ({
         getRandomObjects: build.query<RandomObjectsApiResponse, string>({
             query: (departmentId) => `${PATH}/random/${departmentId}`,
