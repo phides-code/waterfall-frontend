@@ -20,7 +20,7 @@ jobs:
                   touch .env
                   echo VITE_AWS_REGION=${{ secrets.AWS_REGION }} >> .env
 
-                  echo VITE_BANANAS_SERVICE_URL=${{ secrets.BANANAS_SERVICE_URL }} >> .env
+                  echo VITE_SERVICE_URL=${{ secrets.SERVICE_URL }} >> .env
                   echo VITE_IDENTITY_POOL_ID=${{ secrets.IDENTITY_POOL_ID }} >> .env
 
             - name: Build
