@@ -1,6 +1,6 @@
 import { act, screen } from '@testing-library/react';
-import { App } from './components/App';
 import { renderWithProviders } from './utils/test-utils';
+import App from './components/App';
 
 test('App should have correct initial render', () => {
     renderWithProviders(<App />);
