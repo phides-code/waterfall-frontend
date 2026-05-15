@@ -1,5 +1,4 @@
-import { createApi } from '@reduxjs/toolkit/query/react';
-import { createAwsSignedBaseQuery } from '../../app/awsSignedBaseQuery';
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import type { RandomObject } from '../../app/types';
 
 interface ObjectApiResponse {
@@ -10,9 +9,8 @@ interface ObjectApiResponse {
 const PATH = 'artworks';
 
 export const objectApiSlice = createApi({
-    baseQuery: createAwsSignedBaseQuery({
+    baseQuery: fetchBaseQuery({
         baseUrl: import.meta.env.VITE_SERVICE_URL as string,
-        identityPoolId: import.meta.env.VITE_IDENTITY_POOL_ID as string,
     }),
     reducerPath: `${PATH}Api`,
     endpoints: (build) => ({
