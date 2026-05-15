@@ -15,7 +15,7 @@ export const randomObjectsApiSlice = createApi({
     reducerPath: `${PATH}RandomApi`,
     endpoints: (build) => ({
         getRandomObjects: build.query<RandomObjectsApiResponse, string>({
-            query: (departmentId) => `${PATH}/random/${departmentId}`,
+            query: (departmentId) => `/random/${departmentId}`,
         }),
     }),
 });

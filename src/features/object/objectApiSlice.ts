@@ -15,7 +15,7 @@ export const objectApiSlice = createApi({
     reducerPath: `${PATH}Api`,
     endpoints: (build) => ({
         getObject: build.query<ObjectApiResponse, string>({
-            query: (objectId) => `${PATH}/${objectId}`,
+            query: (objectId) => `/${objectId}`,
         }),
     }),
 });
